@@ -4,6 +4,8 @@ import {useForm} from "react-hook-form";
 import InputField from "@/components/forms/InputField";
 import {Button} from "@/components/ui/button";
 import FooterLink from "@/components/FooterLink";
+import {signIn} from "@/lib/actions/auth.actions";
+import {toast} from "sonner";
 
 const SignInPage = () => {
     const router = useRouter();
@@ -16,7 +18,29 @@ const SignInPage = () => {
         },
         mode: "onBlur",
     });
-    const onSubmit = async (data: SignInFormData) => console.log(data);
+    const onSubmit = async (data: SignInFormData) => {
+        try {
+            const result = await signIn(data);
+            if (result.success) {
+                router.push("/");
+            }
+
+
+        } catch (error) {
+            console.error(error);
+
+            // Check if it's an email verification error
+            if (error instanceof Error && error.message.includes('Email not verified')) {
+                toast.error('Email not verified', {
+                    description: 'Please check your inbox and verify your email before signing in.',
+                });
+            } else {
+                toast.error('Sign in failed', {
+                    description: error instanceof Error ? error.message : 'Failed to login',
+                });
+            }
+        }
+    }
     return (
         <>
             <h1 className="form-title">
