@@ -1,0 +1,84 @@
+\begin{figure}[htbp]
+\centering
+\begin{minipage}{0.8\textwidth} % Ajuste la largeur du bloc sur la page
+\dirtree{%
+.1 ROAPP-FRONTEND.
+.2 .angular/.
+.2 .vscode/.
+.2 environments/.
+.2 node\_modules/.
+.2 src/.
+.3 app/.
+.4 assets/.
+.4 components/.
+.5 access-denied-modal/.
+.5 alert-expired-access/.
+.5 custom-modal/.
+.5 error-modal/.
+.5 excel-export/.
+.5 fehlermeldung-grund-management/.
+.5 gohome-button/.
+.5 header/.
+.5 loader-circle/.
+.5 modal-dialog/.
+.5 pdf-export/.
+.5 rework-modal/.
+.5 sidenav/.
+.5 stillstand-active/.
+.5 stillstand-grund-management/.
+.5 welcome/.
+.4 directives/.
+.4 guards/.
+.4 interceptors/.
+.4 models/.
+.4 pages/.
+.5 admin-dashboard/.
+.5 bauteil-management/.
+.5 error-form/.
+.5 fehlermeldung/.
+.5 graph-fehlermeldung/.
+.5 graph-stillstand/.
+.5 hilfe-logistik/.
+.5 hilfe-teamleiter/.
+.5 home/.
+.5 linien-management/.
+.5 login/.
+.5 nacharbeit-verwalten/.
+.5 rework-form/.
+.5 schichtbuch/.
+.5 schichtbucheintrag-verwaltung/.
+.5 signup/.
+.5 stillstand/.
+.5 stillstand-form/.
+.5 user-management/.
+.4 services/.
+.5 authentication/.
+.5 barcode/.
+.4 constants/.
+.3 app.component.css.
+.3 app.component.html.
+.3 app.component.spec.ts.
+.3 app.component.ts.
+.3 app.config.ts.
+.3 app.routes.ts.
+.3 index.html.
+.3 main.ts.
+.3 proxy.conf.json.
+.3 styles.css.
+.2 .editorconfig.
+.2 .gitignore.
+.2 .postcssrc.json.
+.2 angular.json.
+.2 claude.ts.
+.2 Dockerfile.
+.2 package-lock.json.
+.2 package.json.
+.2 README.md.
+.2 tsconfig.app.json.
+.2 tsconfig.json.
+.2 tsconfig.spec.json.
+}
+\end{minipage}
+\caption{Structure globale de l'application ROAPP-FRONTEND}
+\label{fig:project_structure}
+\end{figure}
